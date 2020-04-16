@@ -36,3 +36,5 @@ where EmployeeID = 502
 select count(*) from simple
 
 rollback transaction
+
+select * from EMPLOYEE
