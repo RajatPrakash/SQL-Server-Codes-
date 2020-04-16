@@ -56,5 +56,23 @@ select * from HR_Amount
 where Amount = '999.00'
 
 Rollback Transaction
+go
 
 ---Output : Successfully Completed.
+
+----Securing the View So that No one can Alter or change the query :WITH ENCRYPTION ---------------------------------
+
+Create View HR_Amount_Secured WITH ENCRYPTION as
+select E.EmployeeFirstName,E.EmployeeLastName,T.amount,D.deptName
+from employee E join dept D on
+E.Department = D.deptname 
+ join tblTransaction T on
+t.EmployeeID = E.EmployeeID 
+where t.Amount > 200 and D.deptname = 'HR'
+go
+
+------now only data can be access but no the view Query-------------------
+
+select top(1) * from HR_Amount_Secured
+go
+
