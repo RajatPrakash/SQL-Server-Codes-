@@ -27,3 +27,5 @@ on e.EmployeeID = t.EmployeeID
 where t.EmployeeID between 300 and 500
 -- order by t.EmployeeID
 go
+
+select * from dept
