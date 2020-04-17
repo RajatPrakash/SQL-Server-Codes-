@@ -46,7 +46,7 @@ AS BEGIN
 	select *,'To be Deleted' from deleted
 	delete from tblTransaction as T join deleted D 
 	on	T.EmployeeID = D.[Transaction Employee ID]
-	and T.DateofTransaction = D.[Date OF Transaction]
+	and T.DateofTransaction = D.[Date OF Transaction]gi		
 	and T.Amount = D.Amount
 END
 
