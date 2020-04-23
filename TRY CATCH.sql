@@ -19,7 +19,9 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		set @AverageBalance = 0
-		Return 1
+		select ERROR_MESSAGE() as 'Error Message' 
+		select ERROR_SEVERITY() as 'Error Serverity' -- 0  to 10 are for information
+													 -- 16 is default 
 	END CATCH
 
 end  --Commands completed successfully.
