@@ -41,3 +41,26 @@ tblTransaction
 where EmployeeID in 
 (select EmployeeID from EMPLOYEE where EmployeeLastName like 'y%')
 order by EmployeeID
+
+
+-----------------name does not started with y using subquery--------------
+
+
+select * from 
+tblTransaction
+where EmployeeID in 
+(select EmployeeID from EMPLOYEE where EmployeeLastName not like 'y%')
+order by EmployeeID   --- employeeid should be present in both the tables
+					  --- inner join
+
+
+
+select * from 
+tblTransaction
+where EmployeeID not in 
+(select EmployeeID from EMPLOYEE where EmployeeLastName like 'y%')
+order by EmployeeID  --employeeid should only be present in tblTransaction tables
+					 --- left join
+
+--select * from tblTransaction where EmployeeID = 3
+
