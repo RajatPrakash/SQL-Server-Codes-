@@ -8,6 +8,7 @@ join (select * from EMPLOYEE
 where EmployeeLastName like 'y%' ) as e
 on e.EmployeeID = t.EmployeeID
 order by t.EmployeeID
+
 ----we can also get the same result with normal join query
 
 select * from tblTransaction as t
