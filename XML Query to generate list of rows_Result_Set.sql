@@ -1,0 +1,1 @@
+﻿Bananas, Apples, Cherries, Emeralds, Diamonds, Furniture,
