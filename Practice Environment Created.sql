@@ -44,3 +44,24 @@ insert into employees values(8,'Wasim',34000,30,'Assistant',1,NULL,'M','20200319
 insert into employees values(9,'ramu',56000,20,'Tester',2,25000,'M','20120223 00:00:00')
 insert into employees values(10,'krishna',0,NULL,'NULL',0,0,'NULL','20200324 08:57:41')
 
+
+------------INCREASING THE PRACTICE ENVIRONMENT BY ADD MORE TABLES
+
+Create Table country(cid int,cname varchar(20))
+insert into country values(1,'India'),(2,'USA')
+
+
+Create Table state(sid int,sname varchar(20),cid int)
+
+insert into state values(11,'MP',1),(22,'UP',1),(33,'Gujrat',1),(44,'Maharastra',1),(55,'California',2),(66,'FLORIDA',2),(77,'Karnataka',1)
+
+
+Create Table city(city_id int,city_name varchar(20),sid int)
+
+insert into city values(1111,'Indore',11),(222,'Ahemdabad',33),(212,'Rajkot',33),(212,'Surat',33),(214,'Pune',44),(215,'Mumbai',44),(216,'Los Angeles',55),(217,'Miami',66),(222,'Ujain',11)
+,(333,'Bhopal',11),(444,'Jabalpur',11),(555,'Guna',11)
+
+
+select * from city
+select * from state
+select * from country
